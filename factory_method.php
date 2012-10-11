@@ -28,7 +28,7 @@ class AnotherConcreteProduct implements ProductInterface
     }
 }
 
-class ProductFactory
+class ComplexProductFactory
 {
     public function factory($type)
     {
@@ -48,6 +48,24 @@ class ProductFactory
     }
 }
 
-$productFactory = new ProductFactory();
+class SimpleProductFactory
+{
+    public function factory($type)
+    {
+        $className = $type.'Product';
+        if (!class_exists($className)) {
+            throw new Exception('Class '.$className.' not found');
+        }
+        return new $className;
+    }
+}
+
+// Using the ComplexProductFactory
+$productFactory = new ComplexProductFactory();
 $product = $productFactory->factory('Concrete');
+echo $product->getName();
+
+// Using the SimpleProductFactory
+$simpleProductFactory = new SimpleProductFactory();
+$product = $simpleProductFactory->factory('AnotherConcrete');
 echo $product->getName();
