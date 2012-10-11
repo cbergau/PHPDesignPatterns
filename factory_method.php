@@ -5,6 +5,7 @@
  * @author    Christian Bergau <cbergau86@gmail.com>
  * @copyright Free for all
  * @package   PHPDesignPatterns
+ * @link      http://en.wikipedia.org/wiki/Factory_pattern
  */
 
 interface ProductInterface
