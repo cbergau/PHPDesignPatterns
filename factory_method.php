@@ -1,0 +1,4 @@
+<?php
+/**
+ * Factory method pattern
+ */
