@@ -1,6 +1,6 @@
 <?php
 /**
- * Factory method pattern example
+ * Observer pattern example
  *
  * @author    Christian Bergau <cbergau86@gmail.com>
  * @copyright Free for all
