@@ -29,8 +29,6 @@ abstract class AbstractDecorator implements ComponentInterface
     {
         $this->component = $component;
     }
-
-    abstract public function operation();
 }
 
 class ConcreteDecorator extends AbstractDecorator
