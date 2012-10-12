@@ -21,7 +21,7 @@ class ConcreteComponent implements ComponentInterface
     }
 }
 
-abstract class Decorator implements ComponentInterface
+abstract class AbstractDecorator implements ComponentInterface
 {
     protected $component;
 
@@ -33,7 +33,7 @@ abstract class Decorator implements ComponentInterface
     abstract public function operation();
 }
 
-class ConcreteDecorator extends Decorator
+class ConcreteDecorator extends AbstractDecorator
 {
     public function operation()
     {
