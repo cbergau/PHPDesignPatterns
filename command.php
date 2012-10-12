@@ -1,12 +1,12 @@
 <?php
 /**
  * Command pattern example
-*
-* @author    Christian Bergau <cbergau86@gmail.com>
-* @copyright Free for all
-* @package   PHPDesignPatterns
-* @link      http://en.wikipedia.org/wiki/Command_pattern
-*/
+ *
+ * @author    Christian Bergau <cbergau86@gmail.com>
+ * @copyright Free for all
+ * @package   PHPDesignPatterns
+ * @link      http://en.wikipedia.org/wiki/Command_pattern
+ */
 
 class Invoker
 {
@@ -66,18 +66,18 @@ class Receiver
 
 $invoker = new Invoker();
 $invoker->addCommand(
-        'standard',
-        array(
-                new FirstConcreteCommand(),
-        )
+    'standard',
+    array(
+        new FirstConcreteCommand(),
+    )
 );
 
 $invoker->addCommand(
-        'deluxe',
-        array(
-                new FirstConcreteCommand(),
-                new SecondConcreteCommand()
-        )
+    'deluxe',
+    array(
+        new FirstConcreteCommand(),
+        new SecondConcreteCommand()
+    )
 );
 
 $someReceiver = new Receiver('ReceiverOne');
