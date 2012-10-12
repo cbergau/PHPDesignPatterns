@@ -8,29 +8,34 @@
  * @link      http://en.wikipedia.org/wiki/Observer_pattern
  */
 
-interface Observer
-{
-    public function update(Observable $subject);
+/*
+These interfaces are part of the Standard PHP library and can be used > 5.1.0
+
+http://www.php.net/manual/en/class.splsubject.php
+http://www.php.net/manual/en/class.splobserver.php
+
+interface SplObserver  {
+    abstract public function update ($subject) {}
 }
 
-interface Observable
-{
-    public function attach(Observer $observer);
-    public function detach(Observer $observer);
-    public function notify();
+interface SplSubject  {
+    abstract public function attach ($observer) {}
+    abstract public function detach ($observer) {}
+    abstract public function notify () {}
 }
+*/
 
-class Subject implements Observable
+class Subject implements SplSubject
 {
     protected $observers = array();
     protected $value = 0;
 
-    public function attach(Observer $observer)
+    public function attach(SplObserver $observer)
     {
         $this->observers[] = $observer;
     }
 
-    public function detach(Observer $observer)
+    public function detach(SplObserver $observer)
     {
         $this->observers = array_diff($this->observers, array($observer));
     }
@@ -54,9 +59,9 @@ class Subject implements Observable
     }
 }
 
-class ValueObserver implements Observer
+class ValueObserver implements SplObserver
 {
-    public function update(Observable $subject)
+    public function update(SplSubject $subject)
     {
         if ($subject->getValue() > 20) {
             echo "Value is greater than 20!";
