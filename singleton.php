@@ -1,0 +1,3 @@
+<?php
+
+// NEVER USE SINGLETONS!
