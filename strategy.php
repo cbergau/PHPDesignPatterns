@@ -13,7 +13,7 @@ interface StrategyInterface
     public function algorithm();
 }
 
-class FirstConcreateStrategy implements StrategyInterface
+class FirstConcreteStrategy implements StrategyInterface
 {
     public function algorithm()
     {
@@ -21,7 +21,7 @@ class FirstConcreateStrategy implements StrategyInterface
     }
 }
 
-class SecondConcreateStrategy implements StrategyInterface
+class SecondConcreteStrategy implements StrategyInterface
 {
     public function algorithm()
     {
@@ -44,8 +44,8 @@ class Context
     }
 }
 
-$context = new Context(new FirstConcreateStrategy());
+$context = new Context(new FirstConcreteStrategy());
 $context->executeStrategy();
 
-$context = new Context(new SecondConcreateStrategy());
+$context = new Context(new SecondConcreteStrategy());
 $context->executeStrategy();
