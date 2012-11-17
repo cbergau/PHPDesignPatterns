@@ -2,7 +2,7 @@
 /**
  * Null Object Pattern
  *
- * @author    Christian Bergau <cbergau86@gmail.com>
+ * @author    Ingo Walz
  * @copyright Free for all
  * @package   PHPDesignPatterns
  * @link      http://en.wikipedia.org/wiki/Null_Object_pattern
