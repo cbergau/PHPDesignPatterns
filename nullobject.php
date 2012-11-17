@@ -1,8 +1,13 @@
 <?php
 /**
  * Null Object Pattern
- * http://en.wikipedia.org/wiki/Null_Object_pattern
+ *
+ * @author    Christian Bergau <cbergau86@gmail.com>
+ * @copyright Free for all
+ * @package   PHPDesignPatterns
+ * @link      http://en.wikipedia.org/wiki/Null_Object_pattern
  */
+
 namespace Model {
     interface BrainInterface {
         public function setIQ($iq);
