@@ -39,6 +39,5 @@ class ConcreteDecorator extends AbstractDecorator
     }
 }
 
-$component = new ConcreteComponent();
-$decorated = new ConcreteDecorator($component);
-echo $decorated->operation();
+$component = new ConcreteDecorator(new ConcreteComponent());
+echo $component->operation();
