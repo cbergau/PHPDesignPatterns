@@ -27,7 +27,6 @@ class Originator
     {
         $this->state = $memento->getSavedState();
         echo "Originator: State after restoring from Memento: " . $this->state . PHP_EOL;
-        ;
     }
 }
 
