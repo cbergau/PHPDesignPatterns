@@ -4,37 +4,48 @@
  *
  * @author    Ingo Walz
  * @copyright Free for all
- * @package   PHPDesignPatterns
  * @link      http://en.wikipedia.org/wiki/Null_Object_pattern
  */
 
-namespace Model {
-    interface BrainInterface {
+namespace Model
+{
+    interface BrainInterface
+    {
         public function setIQ($iq);
         public function getIQ();
     }
     
-    class Brain implements BrainInterface {
+    class Brain implements BrainInterface
+    {
         protected $iq = null;
 
-        public function getIQ() {
+        public function getIQ()
+        {
             return $this->iq;
         }
         
-        public function setIQ($iq) {
+        public function setIQ($iq)
+        {
             $this->iq = $iq;
         }
     }
     
-    class NullBrain implements BrainInterface {
-        public function setIQ($iq) { }
-        public function getIQ() {
+    class NullBrain implements BrainInterface
+    {
+        public function setIQ($iq)
+        {
+        }
+
+        public function getIQ()
+        {
             return "Sooo low? Really?";
         }
     }
     
-    class BrainAdapter {
-        public function getByNumber($iq) {
+    class BrainAdapter
+    {
+        public function getByNumber($iq)
+        {
             if($iq <= 0)
                 return new NullBrain();
             
@@ -51,6 +62,4 @@ namespace Model {
         
         echo "Your IQ is: " . $brain->getIQ() . PHP_EOL;
     }
-    
 }
-

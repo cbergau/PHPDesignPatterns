@@ -4,7 +4,6 @@
  *
  * @author    Christian Bergau <c.bergau@netrada.com>
  * @copyright Free for all
- * @package   PHPDesignPatterns
  * @link      http://en.wikipedia.org/wiki/Memento_pattern
  */
 
