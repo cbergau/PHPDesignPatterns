@@ -1,6 +1,6 @@
 <?php
 /**
- * Observer pattern example
+ * Visitor pattern example
  *
  * @author    Daniel Basten <axhm3a@gmail.com>
  * @copyright Free for all
