@@ -1,6 +1,6 @@
 <?php
 /**
- * Decorator pattern example
+ * Strategy pattern example
  *
  * @author    Christian Bergau <cbergau86@gmail.com>
  * @copyright Free for all
