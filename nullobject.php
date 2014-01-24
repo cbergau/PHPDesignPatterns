@@ -17,7 +17,7 @@ namespace Model
     
     class Brain implements BrainInterface
     {
-        protected $iq = null;
+        protected $iq;
 
         public function getIQ()
         {
@@ -46,8 +46,9 @@ namespace Model
     {
         public function getByNumber($iq)
         {
-            if($iq <= 0)
+            if ($iq <= 0) {
                 return new NullBrain();
+            }
             
             $brain = new Brain();
             $brain->setIQ($iq);
