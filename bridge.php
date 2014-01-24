@@ -65,18 +65,18 @@ class CircleShape extends Shape
         );
     }
 
-    public function resizeByPercentage($dPct)
+    public function resizeByPercentage($percentage)
     {
-        $this->radius *= $dPct;
+        $this->radius *= $percentage;
     }
 }
 
-$aShapes = array(
+$shapes = array(
     new CircleShape(1, 3, 7, new DrawingAPI1()),
     new CircleShape(5, 7, 11, new DrawingAPI2()),
 );
 
-foreach ($aShapes as $shapes) {
-    $shapes->resizeByPercentage(2.5);
-    $shapes->draw();
+foreach ($shapes as $shape) {
+    $shape->resizeByPercentage(2.5);
+    $shape->draw();
 }
