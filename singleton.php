@@ -1,4 +1,11 @@
 <?php
+/**
+ * Chain of Responsibility pattern example
+ *
+ * @author    Christian Bergau <cbergau86@gmail.com>
+ * @copyright Free for all
+ * @link      https://en.wikipedia.org/wiki/Singleton_pattern
+ */
 
 class Singleton
 {
